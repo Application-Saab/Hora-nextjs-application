@@ -199,7 +199,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className={`${styles.bannerDecorationImage} bannerDecorationImage`}>
-                  <Link href="/party-food-delivery-live-catering-buffet/party-food-delivery">
+                  <Link href="/party-food-delivery-live-catering-buffet/food-category?selectedfoodCategory=party-food-delivery">
                     <Image
                       src={bannerFoodDeliveryImage}
                       alt="Food Delivery Near me"
@@ -219,7 +219,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className={`${styles.bannerDecorationImage} bannerDecorationImage`}>
-                  <Link href="/party-food-delivery-live-catering-buffet/party-live-buffet-catering">
+                  <Link href="/party-food-delivery-live-catering-buffet/food-category?selectedfoodCategory=party-live-buffet-catering">
                     <Image src={service4Image} alt="Return Gift Near me" style={{ height: 'auto' }} />
                     <h2
                       style={{

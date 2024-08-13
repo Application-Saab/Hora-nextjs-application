@@ -44,10 +44,10 @@ const Decoration = () => {
     const openCatItems = (item) => {
         dispatch(setState(item.subCategory, item.imgAlt));
         if (hasCityPageParam) {
-            router.push(`/${city}/balloon-decoration/${item.catValue}`);
+            router.push(`/city/balloon-decoration/category?city=${city}&catValue=${item.catValue}`);
         }
         else {
-            router.push(`/balloon-decoration/${item.catValue}`);
+            router.push(`/balloon-decoration/category?catValue=${item.catValue}`);
         }
     };
 

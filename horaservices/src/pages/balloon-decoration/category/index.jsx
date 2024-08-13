@@ -181,10 +181,10 @@ const DecorationCatPage = () => {
     const productName = product.name.replace(/ /g, "-");
     dispatch(setState(subCategory, orderType, catValue, product));
     if (hasCityPageParam) {
-      router.push(`/${city}/balloon-decoration/${catValue}/product/${productName}`);
+      router.push(`/city/balloon-decoration/category/product/name?city=${city}&catValue=${catValue}&productName=${productName}`);
     }
     else {
-      router.push(`/balloon-decoration/${catValue}/product/${productName}`);
+      router.push(`/balloon-decoration/category/product/name?catValue=${catValue}&productName=${productName}`);
     }
   };
 
@@ -213,7 +213,7 @@ const DecorationCatPage = () => {
         <script type="application/ld+json">{scriptTag}</script>
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Hora Services" />
-        <meta property="og:url" content={`https://horaservices.com/balloon-decoration/${catValue}`} />
+        <meta property="og:url" content={`https://horaservices.com/balloon-decoration/category?catValue=${catValue}`} />
         <meta property="og:type" content="website" />
       </Head>
       <>

@@ -129,7 +129,7 @@ function DecorationCatDetails() {
         <script type="application/ld+json">{scriptTag}</script>
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Hora Services" />
-        <meta property="og:url" content={`https://horaservices.com/balloon-decoration/${catValue}/product/${product.name}`} />
+        <meta property="og:url" content={`https://horaservices.com/balloon-decoration/category/product/name?catValue=${catValue}&productName=${product.name}`} />
         <meta property="og:type" content="website" />
       </Head>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

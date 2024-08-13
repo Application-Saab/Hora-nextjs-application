@@ -141,7 +141,7 @@ const Login = () => {
 
                 if (response.data.status === API_SUCCESS_CODE) {
                     // handleLogout();
-                   // setLoginMsg("Successfully logged in");
+                    // setLoginMsg("Successfully logged in");
                     localStorage.setItem('isLoggedIn', 'true');
                     localStorage.setItem("mobileNumber", mobileNumber);
                     localStorage.setItem('token', response.data.token);
@@ -160,10 +160,15 @@ const Login = () => {
                                     selectedCount
                                 }
                             });
-                        } else if (previousPage.startsWith(`/balloon-decoration/${catValue}/product`)) {
+                        } else if (previousPage.startsWith(`/balloon-decoration/category/product`)) {
                             router.push({
                                 pathname: '/checkout',
-                                query: { subCategory, product, orderType }
+                                query: { subCategory, product, orderType, catValue }
+                            });
+                        } else if (previousPage.startsWith(`/city/balloon-decoration/category/product`)) {
+                            router.push({
+                                pathname: '/checkout',
+                                query: { subCategory, product, orderType, catValue }
                             });
                         } else if (previousPage.includes('/party-food-delivery-live-catering-buffet-select-date')) {
                             router.push({

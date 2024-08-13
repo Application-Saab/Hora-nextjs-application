@@ -26,6 +26,7 @@ import styled from 'styled-components';
 import InfoIcon from '../../../assets/info.png';
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Popup from "@/utils/popup";
 const orangeColor = '#FF6F61';
 const defaultColor = '#B0BEC5';
 
@@ -60,7 +61,7 @@ const CreateOrder = ({ history, currentStep }) => {
         useState(false);
     const [isViewAllExpanded, setIsViewAllExpanded] = useState(false);
     const [popupMessage, setPopupMessage] = useState({
-        image: "",
+        img: "",
         title: "",
         body: "",
         button: "",
@@ -194,7 +195,7 @@ const CreateOrder = ({ history, currentStep }) => {
         if (selectedDishes.length > 11 && !isSelected) {
             setWarningVisibleForDishCount(true);
             setPopupMessage({
-                image: warningImage,
+                img: warningImage,
                 title: "Total Dishes Selected can not be more than 12 Dish.",
                 body: "Total dish selected can not be more than 12 dish, for more help contact us.",
                 button: "Contact Us",
@@ -239,7 +240,7 @@ const CreateOrder = ({ history, currentStep }) => {
         } else {
             setWarningVisibleForCuisineCount(true);
             setPopupMessage({
-                image: warningImage,
+                img: warningImage,
                 title: "One chef is only expert in 3 cuisine only.",
                 body: "Our chef is expert in cuisines only please select appropriate number of cuisines to continue",
                 button: "Continue",
@@ -733,6 +734,9 @@ const CreateOrder = ({ history, currentStep }) => {
                     </Col>
                 </Row>
             </div>
+            {isWarningVisibleForCuisineCount && (<Popup popupMessage={popupMessage} onClose={handleWarningClose} />)}
+            {isWarningVisibleForDishCount && (<Popup popupMessage={popupMessage} onClose={handleWarningClose} />)}
+      
         </div>
     )
 }

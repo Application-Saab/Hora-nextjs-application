@@ -28,7 +28,7 @@ const FoodDeliveryCreateOrder = (currentStep) => {
   const router = useRouter();
   console.log(router)
   let { selectedfoodCategory } = router.query;
-  const [selectedOption, setSelectedOption] = useState(selectedfoodCategory);
+  // const [selectedOption, setSelectedOption] = useState(selectedfoodCategory);
   // const selectedOption = router.asPath.split('/').pop();
   const [orderType, setOrderType] = useState(2);
   const [isDishSelected, setIsDishSelected] = useState(false);
@@ -67,7 +67,7 @@ const FoodDeliveryCreateOrder = (currentStep) => {
     setWarningVisibleForCuisineCount(false);
     setWarningVisibleForTotalAmount(false);
   };
-  console.log(selectedOption)
+  // console.log(selectedOption)
 
   // get category of cuisines
 
@@ -362,7 +362,7 @@ const FoodDeliveryCreateOrder = (currentStep) => {
       }
     </div>
   );
-console.log('selectedOption',selectedOption)
+// console.log('selectedOption',selectedOption)
   const addDish = selectedDishPrice => {
     if (!selectedDishDictionary || Object.keys(selectedDishDictionary).length === 0) {
       console.error("selectedDishDictionary is undefined or empty");
@@ -380,7 +380,7 @@ console.log('selectedOption',selectedOption)
     });
     // router.push(`/party-food-delivery-live-catering-buffet-select-date/${selectedOption}`, { state: { selectedDishDictionary, selectedDishPrice, selectedDishes, orderType , isDishSelected , selectedCount , selectedDishQuantities  , selectedOption} });
     router.push({
-      pathname: `/party-food-delivery-live-catering-buffet-select-date/${selectedOption}`,
+      pathname: `/party-food-delivery-live-catering-buffet-select-date/food-category`,
       query: {
         selectedDishDictionary: JSON.stringify(selectedDishDictionary),
         selectedDishPrice,
@@ -389,7 +389,8 @@ console.log('selectedOption',selectedOption)
         isDishSelected,
         selectedCount,
         selectedDishQuantities: JSON.stringify(selectedDishQuantities),
-        selectedOption
+        selectedOption:selectedfoodCategory,
+        selectedfoodCategory
       },
     });
   };
