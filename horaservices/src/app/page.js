@@ -32,7 +32,7 @@ import service7Image from "../assets/entertainment-home-banner-sec.png";
 import service6Image from "../assets/return-home-banner-sec.png";
 import downloadAppImage from "../assets/download-app-sec.png";
 import whatsppicon from "../assets/whatsapp-icon.png";
-import HomeSlider from "../components/HomeSlider";
+// import HomeSlider from "../components/HomeSlider";
 import { Helmet } from "react-helmet";
 import { getHomeOrganizationSchema } from "../utils/schema";
 import { useRouter } from "next/navigation";

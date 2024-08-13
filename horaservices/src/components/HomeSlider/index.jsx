@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import video1 from "../../assets/decoration-review.mp4";
+// import video1 from "../../assets/decoration-review.mp4";
 import thumb1 from "../../assets/video1-thumbanail.png";
 import thumb2 from "../../assets/video-thum.png";
 import reviewicon from "../../assets/review-icon.png";
