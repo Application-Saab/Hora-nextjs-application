@@ -6,7 +6,7 @@ import { Modal, Button, Container, Row, Col, Spinner } from "react-bootstrap";
 // import { useNavigate } from 'react-router-dom';
 import checkImage from "../../../assets/tick.jpeg";
 import orderWarning from "../../../assets/OrderWarning.png";
-import Popup from "../../../utils/popup";
+import Popup from "../../utils/popup";
 import SelectDishes from "../../../assets/selectDish.png";
 import SelectDateTime from "../../../assets/event2.png";
 import SelectConfirmOrder from "../../../assets/confirm_order.png";

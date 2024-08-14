@@ -173,12 +173,12 @@ useEffect(() => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/party-food-delivery-live-catering-buffet/food-category?selectedfoodCategory=party-food-delivery" style={styles.subMenuLink}>
+                      <Link href="/party-food-delivery-live-catering-buffet?selectedfoodCategory=party-food-delivery" style={styles.subMenuLink}>
                         Food Delivery
                       </Link>
                     </li>
                     <li>
-                      <Link href="/party-food-delivery-live-catering-buffet/food-category?selectedfoodCategory=party-live-buffet-catering" style={styles.subMenuLink}>
+                      <Link href="/party-food-delivery-live-catering-buffet?selectedfoodCategory=party-live-buffet-catering" style={styles.subMenuLink}>
                         Live Catering
                       </Link>
                     </li>

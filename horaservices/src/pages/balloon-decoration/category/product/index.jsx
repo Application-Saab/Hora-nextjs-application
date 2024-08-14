@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 // import { useParams } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
-import buynowImage from '../../../../../../assets/experts.png';
-import buynowImage1 from '../../../../../../assets/secured.png';
-import buynowImage2 from '../../../../../../assets/service.png';
-import checkImage from '../../../../../../assets/tick.jpeg';
-import { getDecorationProductOrganizationSchema } from "../../../../../../utils/schema";
-import '../../../../../../css/decoration.css';
+import buynowImage from '../../../../assets/experts.png';
+import buynowImage1 from '../../../../assets/secured.png';
+import buynowImage2 from '../../../../assets/service.png';
+import checkImage from '../../../../assets/tick.jpeg';
+import { getDecorationProductOrganizationSchema } from "../../../../utils/schema";
+import '../../../../css/decoration.css';
 import { useSelector } from 'react-redux';
 import Head from 'next/head';
 import { useRouter } from "next/router";
@@ -29,7 +29,13 @@ function DecorationCatDetails() {
   const scriptTag = JSON.stringify(schemaOrg);
   const [isClient, setIsClient] = useState(false);
   const handleCheckout = (subCategory, product) => {
-    const stateData = { from: window.location.pathname, subCategory, product, orderType, catValue };
+    const stateData = { 
+      from: window.location.pathname,
+      subCategory,
+      product: JSON.stringify(product),
+      orderType,
+      catValue 
+    };
 
     if (localStorage.getItem("isLoggedIn") !== "true") {
       router.push({
@@ -39,7 +45,7 @@ function DecorationCatDetails() {
           subCategory,
           product: JSON.stringify(product),
           orderType,
-          catValue
+          catValue 
         }
       });
     } else {
@@ -123,7 +129,7 @@ function DecorationCatDetails() {
         <script type="application/ld+json">{scriptTag}</script>
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Hora Services" />
-        <meta property="og:url" content={`https://horaservices.com/balloon-decoration/category/product/name?catValue=${catValue}&productName=${product.name}`} />
+        <meta property="og:url" content={`https://horaservices.com/balloon-decoration/category/product?catValue=${catValue}&productName=${product.name}`} />
         <meta property="og:type" content="website" />
       </Head>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

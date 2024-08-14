@@ -3,24 +3,24 @@ import axios from 'axios';
 import { Step, Label, Divider } from 'semantic-ui-react'; // Replace with actual library
 import { ListGroup, ListGroupItem } from 'react-bootstrap';
 import { Modal, Button, Container, Row, Col, Spinner } from 'react-bootstrap';
-import { BASE_URL, GET_CUISINE_ENDPOINT, API_SUCCESS_CODE, GET_MEAL_DISH_ENDPOINT } from '../../../utils/apiconstants';
+import { BASE_URL, GET_CUISINE_ENDPOINT, API_SUCCESS_CODE, GET_MEAL_DISH_ENDPOINT } from '../../utils/apiconstants';
 // import { useNavigate } from 'react-router-dom';
-import RectanglePurple from '../../../assets/Rectanglepurple.png';
-import RectangleWhite from '../../../assets/rectanglewhite.png';
-import MinusIcon from '../../../assets/minus.png';
-import PlusIcon from '../../../assets/plus.png';
+import RectanglePurple from '../../assets/Rectanglepurple.png';
+import RectangleWhite from '../../assets/rectanglewhite.png';
+import MinusIcon from '../../assets/minus.png';
+import PlusIcon from '../../assets/plus.png';
 // import { useParams } from "react-router-dom";
-import warningImage from "../../../assets/Group.png";
-import Popup from '../../../utils/popup';
-import SkeletonLoader from "../../../utils/chefSkeleton";
-import SelectDishes from "../../../assets/selectDish.png";
-import SelectDateTime from "../../../assets/event.png";
-import SelectConfirmOrder from "../../../assets/confirm_order.png";
-import separator from "../../../assets/separator.png";
-import InfoIcon from '../../../assets/info.png';
+import warningImage from "../../assets/Group.png";
+import Popup from '../../utils/popup';
+import SkeletonLoader from "../../utils/chefSkeleton";
+import SelectDishes from "../../assets/selectDish.png";
+import SelectDateTime from "../../assets/event.png";
+import SelectConfirmOrder from "../../assets/confirm_order.png";
+import separator from "../../assets/separator.png";
+import InfoIcon from '../../assets/info.png';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import '../../../css/chefOrder.css';
+import '../../css/chefOrder.css';
 
 const FoodDeliveryCreateOrder = (currentStep) => {
   const viewBottomSheetRef = useRef(null);
@@ -380,7 +380,7 @@ const FoodDeliveryCreateOrder = (currentStep) => {
     });
     // router.push(`/party-food-delivery-live-catering-buffet-select-date/${selectedOption}`, { state: { selectedDishDictionary, selectedDishPrice, selectedDishes, orderType , isDishSelected , selectedCount , selectedDishQuantities  , selectedOption} });
     router.push({
-      pathname: `/party-food-delivery-live-catering-buffet-select-date/food-category`,
+      pathname: `/party-food-delivery-live-catering-buffet-select-date`,
       query: {
         selectedDishDictionary: JSON.stringify(selectedDishDictionary),
         selectedDishPrice,

@@ -181,10 +181,10 @@ const DecorationCatPage = () => {
     const productName = product.name.replace(/ /g, "-");
     dispatch(setState(subCategory, orderType, catValue, product));
     if (hasCityPageParam) {
-      router.push(`/city/balloon-decoration/category/product/name?city=${city}&catValue=${catValue}&productName=${productName}`);
+      router.push(`/city/balloon-decoration/category/product?city=${city}&catValue=${catValue}&productName=${productName}`);
     }
     else {
-      router.push(`/balloon-decoration/category/product/name?catValue=${catValue}&productName=${productName}`);
+      router.push(`/balloon-decoration/category/product?catValue=${catValue}&productName=${productName}`);
     }
   };
 
