@@ -313,10 +313,10 @@ const Drawer = ({ closeDrawer, drawerRef, handleLogout }) => {
       <Link href="/book-chef-cook-for-party" style={style.drawerLink} onClick={closeDrawer}>
         Chef for Party
       </Link>
-      <Link href="/party-food-delivery-live-catering-buffet/party-food-delivery" style={style.drawerLink} onClick={closeDrawer}>
+      <Link href="/party-food-delivery-live-catering-buffet?selectedfoodCategory=party-food-delivery" style={style.drawerLink} onClick={closeDrawer}>
         Food Delivery
       </Link>
-      <Link href="/party-food-delivery-live-catering-buffet/party-live-buffet-catering" style={style.drawerLink} onClick={closeDrawer}>
+      <Link href="/party-food-delivery-live-catering-buffet?selectedfoodCategory=party-live-buffet-catering" style={style.drawerLink} onClick={closeDrawer}>
         Live Catering
       </Link>
       <Link href="/" style={style.drawerLink} onClick={closeDrawer}>
