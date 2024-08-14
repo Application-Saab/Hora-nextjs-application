@@ -23,8 +23,8 @@ const footerColumns = [
     links: [
       { text: 'Chef for Party and Occasions', href: '/book-chef-cook-for-party' },
       { text: 'Decorations for Party and Occasions', href: '/balloon-decoration' },
-      { text: 'Food Delivery for Party and Occasions', href: 'party-food-delivery-live-catering-buffet/party-food-delivery' },
-      { text: 'Catering Service for Party and Occasions', href: '/party-food-delivery-live-catering-buffet/party-live-buffet-catering' },
+      { text: 'Food Delivery for Party and Occasions', href: 'party-food-delivery-live-catering-buffet?selectedfoodCategory=party-food-delivery' },
+      { text: 'Catering Service for Party and Occasions', href: '/party-food-delivery-live-catering-buffet?selectedfoodCategory=party-live-buffet-catering' },
       { text: 'Waiter for Party and Occasions', href: 'https://horaservices.com/ContactUs.html' },
       { text: 'Bar Tender for Party and Occasions', href: 'https://horaservices.com/ContactUs.html' },
       { text: 'Cleaner for Party and Occasions', href: 'https://horaservices.com/ContactUs.html' },
