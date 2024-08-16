@@ -697,7 +697,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Testing from '../components/HomePage/Footer';
 import { Navbar } from 'react-bootstrap';
 
-
+import Navbarr from '../components/HomePage/Navbar';
 
 const CelebrateWithUs = () => {
 
@@ -945,6 +945,7 @@ const CustomerReview = [
 
   return (
     <>
+      <Navbarr />
     <div className="page-width">
       <div className="party-services">
         <h1 class="party-title">✨ All party services one platform ✨</h1>
